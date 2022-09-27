@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Schoolbell&family=Tenor+Sans&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+h1 {
+    font-family: Chicle;
+    font-weight: 400;
+    font-size: 300%;
+}
+
+body {
+    font-family: Tenor Sans, sans-serif;
+    font-size: 1.1rem;
+    min-height: 100vh;
+}
