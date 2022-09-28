@@ -8,6 +8,7 @@
 
 body {
     background-image: linear-gradient(to bottom, #ff0072, #ff2567, #ff395c, #ff4953, #ff584a, #ff6644, #ff723e, #ff7f39, #ff8e35, #ff9d33, #ffac33, #ffbb35);
+    background-color: whitesmoke;
     font-family: Tenor Sans, sans-serif;
     font-size: 1.25rem;
     min-height: 100vh;
@@ -21,8 +22,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10% 0;
-    padding: 10% 0;
+    margin: 10% 0 5%;
+    padding: 10% 0 5%;
 }
 
 h1 {
@@ -30,13 +31,14 @@ h1 {
     font-family: Chicle;
     font-weight: 400;
     font-size: 400%;
-    margin: 1rem 0;
-    padding: 2rem 0;
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center
 }
 
 main > p {
     text-align: center;
-    margin: 1rem;
+    margin: rem;
     padding: 2rem;
 }
 
@@ -48,7 +50,7 @@ main > button {
     font-family: inherit;
     font-size: 1.5rem;
     padding: 1em;
-    margin: 1em;
+    margin: 2em;
 }
 
 /* footer */
@@ -57,8 +59,8 @@ main > button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0;
-    padding: 2rem 0;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
 }
 
 .text {
@@ -84,9 +86,9 @@ main > button {
     color: inherit;
 }
 
-/* media queries */
+/* media querie
 
-@media screen and (mqx-width:490px) {
+@media screen and (max-width:490px) {
     main > p {
         padding-left: 4em;
         margin-left: 2em;
