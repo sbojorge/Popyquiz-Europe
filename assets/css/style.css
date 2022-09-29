@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, #ff0072, #ff2567, #ff395c, #ff4953, #ff584a, #ff6644, #ff723e, #ff7f39, #ff8e35, #ff9d33, #ffac33, #ffbb35);
+    background-image: linear-gradient(to bottom, #150afa, #6349ff, #8d74ff, #b19eff, #d2c7ff, #e6d3fe, #f5e0fd, #ffeeff, #ffddf5, #ffd1bc, #ffdf6a, #fbff01);
     background-color: whitesmoke;
     font-family: Tenor Sans, sans-serif;
     font-size: 1.25rem;
@@ -22,8 +22,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10% 0 5%;
-    padding: 10% 0 5%;
+    margin: 5% 0 5%;
+    padding: 5% 0 5%;
 }
 
 h1 {
@@ -43,7 +43,7 @@ main > p {
 }
 
 main > button {
-    background-color: #53FBDD;
+    background-color: #FBFF01;
     border-style:solid;
     border-color: #150AFA;  
     color: inherit;
@@ -59,8 +59,8 @@ main > button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0;
 }
 
 .text {
