@@ -22,8 +22,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5% 0 5%;
-    padding: 5% 0 5%;
+    margin: 2.5%;
+    padding: 2.5%;
 }
 
 h1 {
@@ -37,20 +37,28 @@ h1 {
 }
 
 main > p {
-    text-align: center;
-    margin: rem;
+    text-align: justify;
+    margin: 1rem;
     padding: 2rem;
+    max-width: 40ch;
 }
 
 main > button {
     background-color: #FBFF01;
     border-style:solid;
-    border-color: #150AFA;  
+    border-color: #150AFA;
+    border-radius: 10%;  
     color: inherit;
     font-family: inherit;
     font-size: 1.5rem;
-    padding: 1em;
-    margin: 2em;
+    padding: 0.5em;
+    margin: 1em;
+}
+
+/* quiz area */
+
+.hide {
+    display: none;
 }
 
 /* footer */
@@ -59,8 +67,8 @@ main > button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.25rem 0;
-    padding: 0.25rem 0;
+    margin-top: 1.5rem;
+    padding-top:1.5rem;
 }
 
 .text {
