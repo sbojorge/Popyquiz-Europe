@@ -74,22 +74,15 @@ main > p {
 /* quiz area */
 
 #quiz-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 75%;
+    max-height: 75%;
     background-color: black;
-    color: white;
-    max-width: 75%;
-    max-width: 75%;
-    
-    margin-top: 4rem;
- 
-    padding-top: 4rem;
-   
+    color: white; 
 }
+/*
 .hide {
     display: none;
-}
+} */
 
 
 
