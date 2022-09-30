@@ -18,16 +18,35 @@
 </head>
 
 <body>
-    <!--home page-->
-    <main class="mn-position">
-        <h1 id="logo-site">Popy Quiz Europe</h1>
-        <a href="test.html">Quiz area (test)</a>
-        <p>Take a walk around Europe with this quiz that mixes culture, gastronomy, sports, nature, cities and as a
-            bonus learn some fun facts about it.</p>
-        <button id="start-btn">Let's go!</button>
-    </main>
-    <!--quiz area-->
     
+    <a href="index.html" style="color:white">home</a>
+    <!--quiz area-->
+    <div id="quiz-container">
+        <!--question and multiple choice answer will be displayed here-->
+        <div id="question-answer--area">
+            <div id="question">
+                <p>Question</p>
+            </div>
+            <div id="mult-ch-answ">
+                <button>option 1</button>
+                <button>option 2</button>
+                <button>option 3</button>
+            </div>
+        </div>       
+        <!--modal should be display after user's choice of answer-->
+        <div id="modal" class="hide"></div>
+        <!--progress bar should be displayed under the q-a area-->
+        <div id="prog-bar"></div>
+    </div>
+    <!--score container-->
+    <div id="score-container">
+        <span>
+            <p>find a nice score tracker</p>
+        </span>
+        <span>
+            <button>Next question</button>
+        </span>
+    </div>
     <!--footer-->
     <footer>
         <div class="social-links">
@@ -59,4 +78,5 @@
     <!--javascript-->
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
