@@ -26,7 +26,7 @@ body {
     padding: 2.5%;
 }
 
-h1 {
+#logo-site {
     color: #150AFA;
     font-family: Chicle;
     font-weight: 400;
@@ -43,17 +43,22 @@ main > p {
     max-width: 40ch;
 }
 
-main > button {
+#start-btn {
     background-color: #FBFF01;
     border-style:solid;
     border-color: #150AFA;
-    border-radius: 10%;  
+    border-radius: 5%;     
     color: inherit;
     font-family: inherit;
     font-size: 1.5rem;
     padding: 0.5em;
     margin: 1em;
 }
+
+#start-btn:hover {
+    box-shadow: 0.1rem 0.1rem 1rem #150AFA;
+}
+
 
 /* quiz area */
 
@@ -94,12 +99,11 @@ main > button {
     color: inherit;
 }
 
-/* media querie
+/* media querie */
 
 @media screen and (max-width:490px) {
-    main > p {
-        padding-left: 4em;
-        margin-left: 2em;
+    #logo-site {
+        font-size: 300%;
     }
     
 }
