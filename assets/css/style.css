@@ -33,8 +33,22 @@ body {
     font-size: 400%;
     margin: 1rem;
     padding: 2rem;
-    text-align: center
+    text-align: center;
+    animation-name: cresendo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
 }
+
+/* animation logo */
+
+@keyframes cresendo {
+    from {font-size: 200%;}
+    to {font-size: 400%;}
+}
+
+
 
 main > p {
     text-align: justify;
