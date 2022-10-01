@@ -57,5 +57,5 @@ let myQuiz = [{
 
 let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
 
-document.getElementById('question').innerHTML = question;
+//document.getElementById('question').innerHTML = question;
 

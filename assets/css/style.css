@@ -76,13 +76,24 @@ main > p {
 #quiz-container {
     max-width: 75%;
     max-height: 75%;
-    background-color: black;
-    color: white; 
+    background-color: rgba(255, 255, 255, 0.5);
+    color: inherit;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-family: Schoolbell, sans-serif;
+    font-size: inherit;    
 }
-/*
+
+.answers {
+    display: block;
+    margin: 1em;
+    padding: 0.5em;
+    
+}
+
 .hide {
     display: none;
-} */
+}
 
 
 
