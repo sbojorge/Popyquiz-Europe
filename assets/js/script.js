@@ -1,6 +1,10 @@
 
 let start = document.getElementById('start-btn');
-start.addEventListener('click', function(){ alert("Hello World!") });
+//start.addEventListener('click', startQuiz);
+
+ 
+
+
 
 let myQuiz = [{
     id : 0,
@@ -49,4 +53,9 @@ let myQuiz = [{
   id : 9,
   question : 'Spain has __ UNESCO World Heritage Sites:',
   answers : [{number: 60, number: 48, number: 12}], correct: 48,  
-}]
+}];
+
+let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
+
+document.getElementById('question').innerHTML = question;
+
