@@ -74,21 +74,33 @@ main > p {
 /* quiz area */
 
 #quiz-container {
-    max-width: 75%;
-    max-height: 75%;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: 75vh;
+    width: 75vw;
+    background-color: rgba(255, 255, 255, 0.5);       
+    margin: 2em 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;        
+}
+
+#question {      
+    text-align: center;
+    margin: 1% 5%;
+    padding: 1%;
+    min-height: 3%;
     color: inherit;
-    margin-left: 50px;
-    margin-top: 50px;
     font-family: Schoolbell, sans-serif;
-    font-size: inherit;    
+    font-size: 1.50rem;
+    background-color: deeppink;
 }
 
 .answers {
     display: block;
     margin: 1em;
     padding: 0.5em;
-    
+    font-size: inherit;
+    font-family: Tenor sans, sans-serif;
+    color: inherit;    
 }
 
 .hide {
