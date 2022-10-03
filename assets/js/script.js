@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
+            if (this.getAttribute("data-type") === "next") {
+                alert("You clicked next!");
             } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
+                let answers = this.getAttribute("data-type");
+                alert(`You clicked ${answers}`);
             }
         });
     }
