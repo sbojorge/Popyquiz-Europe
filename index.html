@@ -20,13 +20,30 @@
 <body>
     <!--home page-->
     <main class="mn-position">
-        <h1 id="logo-site">Popy Quiz Europe</h1>
-        <a href="test.html">Quiz area (test)</a>
+        <h1 id="logo-site">Popy Quiz Europe</h1>        
         <p>Take a walk around Europe with this quiz that mixes culture, gastronomy, sports, nature, cities and as a
             bonus learn some fun facts about it.</p>
         <button id="start-btn" data-type="start">Let's go!</button>
     </main>
-    
+    <!--quiz area-->
+    <div class="quiz-container">
+        <!--question and multiple choice answer will be displayed here-->
+        <div id="question" class="hide"></div>
+        <button data-type="option1" id="opt1" class="hide"></button>
+        <button data-type="option2" id="opt2" class="hide"></button>
+        <button data-type="option3" id="opt3" class="hide"></button>
+    </div>
+    <!--score area-->
+    <div id="score-container" class="hide">
+        <!--current score will be displayed here-->
+        <div id="score-area" class="hide">
+            <span class="hide">Correct answers:</span>
+            <span class="hide">0</span>
+            <span class="hide">Wrong answers:</span>
+            <span class="hide">0</span>
+            <button data-type="next" class="nxt-btn" class="hide">Next</button>
+        </div>
+    </div>    
 
     <!--footer-->
     <footer>

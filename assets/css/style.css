@@ -35,7 +35,7 @@ body {
     padding: 2rem;
     text-align: center;
     animation-name: cresendo;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -73,14 +73,15 @@ main > p {
 
 /* quiz area */
 
-#quiz-container {
-    height: 75vh;
-    width: 75vw;
+.quiz-container {
+    height: 50vh;
+    width: 50vw;
     background-color: rgba(255, 255, 255, 0.5);       
     margin: 2em 10em;
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;        
+    justify-content:flex-start;
+    display: none;        
 }
 
 #question {      
@@ -106,6 +107,9 @@ main > p {
 .hide {
     display: none;
 }
+
+
+
 
 
 

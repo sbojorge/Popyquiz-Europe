@@ -1,5 +1,8 @@
+
 let firstButton = document.getElementById("start-btn");
-firstButton.addEventListener("click",startQuiz);
+firstButton.addEventListener("click", function() {
+  document.getElementsByTagName("p").style.display = none;
+});
  
 
 
