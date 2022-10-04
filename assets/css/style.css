@@ -156,13 +156,13 @@ main > p {
 
 /* media queries */
 
-@media screen and (min-width:490px) {
+@media screen and (max-width:490px) {
     #logo-site {
         font-size: 300%;
     }    
 }
 
-/* rotating small screen size */
+/* rotating small screen size 
 
 @media screen and (max-width:896px) {
     #logo-site, main > p {
@@ -184,7 +184,7 @@ main > p {
         max-width: none;
     }    
    
-}
+} */
 
 
 
