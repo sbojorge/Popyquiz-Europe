@@ -154,7 +154,7 @@ main > p {
     color: inherit;
 }
 
-/* media querie */
+/* media queries */
 
 @media screen and (max-width:490px) {
     #logo-site {
@@ -163,6 +163,29 @@ main > p {
     
 }
 
+/* rotating small screen size */
+
+@media screen and (max-width:896px) {
+    #logo-site, main > p {
+        margin: 0 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .mn-position {
+        margin: 0 2.5%;
+        padding: 0 2.5%;
+    }
+
+    #start-btn {
+        margin: 0.25em;
+        padding: 0.25em;
+    }
+
+    .foot-container {
+        max-width: none;
+    }    
+   
+}
 
 
 
