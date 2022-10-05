@@ -22,8 +22,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2.5%;
-    padding: 2.5%;
+    margin: 0 2.5%;
+    padding: 0 2.5%;
 }
 
 #logo-site {
@@ -31,11 +31,11 @@ body {
     font-family: Chicle;
     font-weight: 400;
     font-size: 400%;
-    margin: 1rem;
+    margin: 1.5rem 1rem 0.5rem;
     padding: 2rem;
-    text-align: center;
+    text-align:center;
     animation-name: cresendo;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -49,8 +49,8 @@ body {
 
 main > p {
     text-align: justify;
-    margin: 1rem;
-    padding: 2rem;
+    margin: 0 1rem;
+    padding: 0 2rem;
     max-width: 40ch;
 }
 
@@ -63,7 +63,7 @@ main > p {
     font-family: inherit;
     font-size: 1.5rem;
     padding: 0.5em;
-    margin: 1em;
+    margin: 2em;
 }
 
 #start-btn:hover {
@@ -117,7 +117,7 @@ main > p {
 
 .foot-container {
     width: 100vw;
-    max-height: 20%;
+    
     position: fixed;
     bottom: 0;
     left: 0;
@@ -127,8 +127,8 @@ main > p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
-    padding-top:1.5rem;
+    margin-bottom:0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .text {
