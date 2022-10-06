@@ -2,10 +2,9 @@
 let firstButton = document.getElementById("start-btn");
 firstButton.addEventListener("click", function() {
   document.getElementById("homepage-container").style.display = "none";
-  document.getElementById("general-container").style.display = "block";
-  
+  document.getElementById("general-container").style.display = "block";  
   });
- 
+  
 /**These are the questions for the quiz */
 
 let myQuiz = [{    
@@ -19,7 +18,7 @@ let myQuiz = [{
   correctAnswer: 'Belgium'
 },
 {
-  q: 'Which of these cities is the birthplace of the famous composer Wolfgang Amadeus Mozarat?:',
+  q: 'Which of these cities is the birthplace of the famous composer Wolfgang Amadeus Mozart?:',
   a: ['Linz', 'Salzburg', 'Vienna'],
   correctAnswer: 'Salzburg'
 },
@@ -84,6 +83,13 @@ let myQuiz = [{
   correctAnswer: 'San Marino and Vatican City'
 }];
 
+let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
+  
+  document.getElementById('question').innerHTML = question.q;
+  document.getElementById('opt1').innerHTML = question.a[0];
+  document.getElementById('opt2').innerHTML = question.a[1];
+  document.getElementById('opt3').innerHTML = question.a[2];
+
 
 
 /** Pick a question randomly and its possible answers on the userinterface */
@@ -91,12 +97,7 @@ let myQuiz = [{
 function startQuiz() {
   
   
-  let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   
-  document.getElementById('question').innerHTML = question.q;
-  document.getElementById('opt1').innerHTML = question.a[0];
-  document.getElementById('opt2').innerHTML = question.a[1];
-  document.getElementById('opt3').innerHTML = question.a[2];
 }
 
 function displayQuestion() {
