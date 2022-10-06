@@ -8,22 +8,22 @@
     <meta name="description"
         content="quiz about some european countries plus interesting facts to learn after each question">
     <meta name="keywords" content="europe, quiz, belgium, france, switzerland, spain">
-    <link rel="stylesheet" href="assets/css/style.css">   
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Popy Quiz Europe</title>
 </head>
-
 <body>
     <!--home page-->
     <main class="mn-position">
-        <h1 id="logo-site">Popy Quiz Europe</h1>        
-        <p id="quiz-presentation">Take a walk around Europe with this quiz that mixes culture, gastronomy, sports, nature, cities and as a
+        <h1 id="logo-site">Popy Quiz Europe</h1>
+        <p id="quiz-presentation">Take a walk around Europe with this quiz that mixes culture, gastronomy, sports,
+            nature, cities and as a
             bonus learn some fun facts about it.</p>
-        <button id="start-btn" data-type="start">Let's go!</button>    
-     </main>
+        <button id="start-btn" data-type="start">Let's go!</button>
+    </main>
     <!--quiz area: progress,question,multiple choice answer and modal will be displayed here-->
     <div class="general-container">
         <!--the progress bar-->
-        <label for="count">Your progress:</label>      
+        <label for="count">Your progress:</label>
         <progress id="count" max="5" value="0"></progress>
         <!--the question and answers-->
         <div id="question" class="hide"></div>
@@ -32,15 +32,14 @@
         <button data-type="option3" id="opt3" class="hide"></button>
         <!--the modal-->
         <div id="modal" class="hide">
-            <div class="modal-content" class="hide" >
+            <div class="modal-content" class="hide">
                 <span class="close-btn">&times;</span>
                 <p id="modal-content"></p>
             </div>
         </div>
     </div>
-    <!--score area-->
+    <!--score and control area: current score and next question button will be available here-->
     <div id="score-container" class="hide">
-        <!--current score will be displayed here-->
         <div id="score-area" class="hide">
             <span class="hide">Correct answers:</span>
             <span class="hide">0</span>
@@ -49,14 +48,12 @@
             <button data-type="next" class="nxt-btn" class="hide">Next</button>
         </div>
     </div>
-    <!--result container-->
+    <!--result and control area: final score and take quiz again button will be available here-->
     <div class="general-container">
-        <!--final score will be displayed here-->
         <span class="hide">Your score:</span>
         <span class="hide">0</span>
         <button class="hide">Take the quiz again</button>
     </div>
-
     <!--footer-->
     <footer>
         <div class="foot-container">
