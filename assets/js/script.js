@@ -1,8 +1,10 @@
 
 let firstButton = document.getElementById("start-btn");
 firstButton.addEventListener("click", function() {
-  document.getElementsByTagName("p").style.display = none;
-});
+  document.getElementById("homepage-container").style.display = "none";
+  document.getElementById("general-container").style.display = "block";
+  
+  });
  
 /**These are the questions for the quiz */
 
