@@ -16,17 +16,27 @@
     <!--home page-->
     <main class="mn-position">
         <h1 id="logo-site">Popy Quiz Europe</h1>        
-        <p id="presentation">Take a walk around Europe with this quiz that mixes culture, gastronomy, sports, nature, cities and as a
+        <p id="quiz-presentation">Take a walk around Europe with this quiz that mixes culture, gastronomy, sports, nature, cities and as a
             bonus learn some fun facts about it.</p>
-        <button id="start-btn" data-type="start">Let's go!</button>
-    </main>
-    <!--quiz area-->
+        <button id="start-btn" data-type="start">Let's go!</button>    
+     </main>
+    <!--quiz area: progress,question,multiple choice answer and modal will be displayed here-->
     <div class="general-container">
-        <!--question and multiple choice answer will be displayed here-->
+        <!--the progress bar-->
+        <label for="count">Your progress:</label>      
+        <progress id="count" max="5" value="0"></progress>
+        <!--the question and answers-->
         <div id="question" class="hide"></div>
         <button data-type="option1" id="opt1" class="hide"></button>
         <button data-type="option2" id="opt2" class="hide"></button>
         <button data-type="option3" id="opt3" class="hide"></button>
+        <!--the modal-->
+        <div id="modal" class="hide">
+            <div class="modal-content" class="hide" >
+                <span class="close-btn">&times;</span>
+                <p id="modal-content"></p>
+            </div>
+        </div>
     </div>
     <!--score area-->
     <div id="score-container" class="hide">
