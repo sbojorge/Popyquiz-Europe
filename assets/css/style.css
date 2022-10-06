@@ -47,7 +47,7 @@ body {
     to {font-size: 400%;}
 }
 
-main > p {
+#presentation {
     text-align: justify;
     margin: 0 1rem;
     padding: 0 2rem;
@@ -108,16 +108,10 @@ main > p {
     display: none;
 }
 
-
-
-
-
-
 /* footer */
 
 .foot-container {
-    width: 100vw;
-    
+    width: 100vw;    
     position: fixed;
     bottom: 0;
     left: 0;
