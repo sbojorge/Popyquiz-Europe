@@ -83,7 +83,7 @@ let myQuiz = [{
   correctAnswer: 'San Marino and Vatican City'
 }];
 
-/** Pick a question randomly and its possible answers on the userinterface */
+/** Pick a question randomly and its possible answers on the user interface */
 
 let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   
@@ -92,17 +92,33 @@ let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   document.getElementById('opt2').innerHTML = question.a[1];
   document.getElementById('opt3').innerHTML = question.a[2];
 
-/** Verify if user's choice is right and change the color to green if right or red if wrong */
+/** if user's choice is right then console log 'bravo' otherwise console log 'try again  */
 
 let options = document.getElementsByClassName("answers");
 
-function handleBtnClick (event) {
-  alert("you made a choice");
+function handleBtnClick (event) { 
+  let correctAnswers = question.correctAnswer;
+  for (i = 0; i < options.length; i++) {
+    let opt = options[i].textContent;
+    if (opt === correctAnswers) {
+      console.log('bravo');
+    } else {
+      console.log('try again');
+    }    
+  }
+}
+  
+for (i = 0; i < options.length; i++) {
+  options[i].addEventListener("click", handleBtnClick);
 }
 
-for (i = 0; i < options.length; i++) {
-options[i].addEventListener("click", handleBtnClick);
-};
+
+
+
+
+
+
+
 
 
 
@@ -117,18 +133,9 @@ function displayQuestion() {
   
 }
 
-/*function checkAnswer() {
+function checkAnswer() {
 
-  for(i = 0; i < questions.a[i]; i++) {
-    if(questions.a[i] === correctAnswer) {
-      questions.a[i].style.backgroundColor = "green";
-    } else {
-      questions.a[i].style.backgroundColor = "red";
-    }
-  }
- 
-
-}*/
+}
 
 function incrementScore() {
 
