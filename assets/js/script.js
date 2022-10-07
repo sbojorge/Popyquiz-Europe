@@ -96,16 +96,12 @@ let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
 
 let options = document.getElementsByClassName("answers");
 
-function handleBtnClick (event) { 
-  let correctAnswers = question.correctAnswer;
-  for (i = 0; i < options.length; i++) {
-    let opt = options[i].textContent;
-    if (opt === correctAnswers) {
-      console.log('bravo');
-    } else {
-      console.log('try again');
-    }    
-  }
+function handleBtnClick (event) {
+  let correctAnswers = question.correctAnswer; 
+  let selectedOption = this.innerHTML;
+  if (selectedOption === correctAnswers) {
+    console.log('bravo');
+  } 
 }
   
 for (i = 0; i < options.length; i++) {
