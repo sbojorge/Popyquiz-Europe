@@ -6,12 +6,17 @@
     box-sizing:border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     background-image: linear-gradient(to bottom, #150afa, #6349ff, #8d74ff, #b19eff, #d2c7ff, #e6d3fe, #f5e0fd, #ffeeff, #ffddf5, #ffd1bc, #ffdf6a, #fbff01);
     background-color: whitesmoke;
     font-family: Tenor Sans, sans-serif;
     font-size: 1.25rem;
     min-height: 100vh;
+    height: -webkit-fill-available;
     color: #1E1926;
 }
 
@@ -74,10 +79,10 @@ body {
 /* quiz area */
 
 #general-container {
-    height: 50vh;
-    width: 50vw;
+    height: 60vh;
+    width: 60vw;
     background-color: rgba(255, 255, 255, 0.5);       
-    margin: 2em 10em;
+    margin: 2em auto;
     display: none;        
 }
 
