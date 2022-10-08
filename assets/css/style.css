@@ -112,7 +112,8 @@ body {
     padding: 0.5em;
     font-size: inherit;
     font-family: Tenor sans, sans-serif;
-    color: inherit;    
+    color: inherit;
+    border: medium solid #150AFA;    
 }
 
 .hide {

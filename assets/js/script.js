@@ -83,7 +83,7 @@ let myQuiz = [{
   correctAnswer: 'San Marino and Vatican City'
 }];
 
-/** Pick a question randomly and its possible answers on the user interface */
+/** Randomly pick a question and its possible answers and display them on the user interface */
 
 let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   
@@ -92,7 +92,7 @@ let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   document.getElementById('opt2').innerHTML = question.a[1];
   document.getElementById('opt3').innerHTML = question.a[2];
 
-/** if user's choice is right then console log 'bravo' otherwise console log 'try again  */
+/** Check user's choice and if right then console log 'bravo' otherwise console log 'try again  */
 
 let options = document.getElementsByClassName("answers");
 
@@ -100,9 +100,12 @@ function handleBtnClick (event) {
   let correctAnswers = question.correctAnswer; 
   let selectedOption = this.innerHTML;
   if (selectedOption === correctAnswers) {
-    console.log('bravo');
-  } 
-}
+    alert('Bravo!');
+  } else {
+    alert('Try again')
+  }
+}  
+ 
   
 for (i = 0; i < options.length; i++) {
   options[i].addEventListener("click", handleBtnClick);
