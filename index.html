@@ -23,8 +23,10 @@
     <!--quiz area: progress,question,multiple choice answer and modal will be displayed here-->
     <div id="general-container">
         <!--the progress bar-->
-        <label for="count">Your progress:</label>
-        <progress id="count" max="5" value="0"></progress>
+        <div id="progress-bar">
+            <label for="count"></label>
+            <progress id="count" max="5" value="0"></progress>
+        </div>
         <!--the question and answers-->
         <div id="qna-container">
             <div id="question"></div>
@@ -39,22 +41,11 @@
                 <p id="modal-content"></p>
             </div>
         </div>
-        <!--score and control area: current score and next question button will be available here-->
-        
-            <div id="score-area">
-                <div id="one" class="hide">
-                    <span>Correct answers:</button>
-                    <span>0</span>
-                </div>
-                <div id="two" class="hide">
-                    <span>Wrong answers:</span>
-                    <span>0</span>
-                </div>
-                <div id="three">
-                    <button data-type="next" id="nxt-btn">Next</button>
-                </div>
-            </div>
+        <!--control area: next question button will be available here-->
+        <div id="control-area">            
+            <button data-type="next" id="nxt-btn">Next</button>            
         </div>
+    </div>
     </div>
     <!--result and control area: final score and take quiz again button will be available here-->
     <div class="general-container">
