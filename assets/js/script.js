@@ -5,7 +5,7 @@ firstButton.addEventListener("click", function() {
   document.getElementById("general-container").style.display = "block";  
   });
   
-/**These are the questions for the quiz */
+//These are the questions for the quiz /
 
 let myQuiz = [{    
   q :'What is the capital of Spain?', 
@@ -83,7 +83,7 @@ let myQuiz = [{
   correctAnswer: 'San Marino and Vatican City'
 }];
 
-/** Randomly pick a question and its possible answers and display them on the user interface */
+//Randomly pick a question and its possible answers and display them on the user interface /
 
 let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   
@@ -92,7 +92,7 @@ let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   document.getElementById('opt2').innerHTML = question.a[1];
   document.getElementById('opt3').innerHTML = question.a[2];
 
-/** Check user's choice and if right then console log 'bravo' otherwise console log 'try again  */
+// Check user's choice and if right then console log 'bravo' otherwise console log 'try again  /
 
 let options = document.getElementsByClassName("answers");
 
@@ -104,12 +104,29 @@ function handleBtnClick (event) {
   } else {
     alert('Try again')
   }
-}  
- 
+} 
   
 for (i = 0; i < options.length; i++) {
   options[i].addEventListener("click", handleBtnClick);
 }
+
+// Display a new question /
+
+let newQuestion = document.getElementById("nxt-btn");
+
+function myFunction() {
+  let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
+  document.getElementById('question').innerHTML = question.q;
+  document.getElementById('opt1').innerHTML = question.a[0];
+  document.getElementById('opt2').innerHTML = question.a[1];
+  document.getElementById('opt3').innerHTML = question.a[2];  
+
+}
+
+newQuestion.addEventListener("click", myFunction);
+
+
+
 
 
 
