@@ -181,7 +181,8 @@ body {
 
 @media screen and (max-width:490px) {
     #logo-site {
-        font-size: 300%;
+        font-size: 100%;
+        padding: 0.5rem
     }    
 }
 
