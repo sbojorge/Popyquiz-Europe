@@ -179,12 +179,15 @@ body {
 
 /* media queries */
 
-@media screen and (max-width:490px) {
+/* for extra small screen devices */
+
+@media screen and (max-width:600px) {
     #logo-site {
-        font-size: 100%;
-        padding: 0.5rem
-    }    
+        padding: 0.5rem;
+    }
 }
+    
+
 
 /* rotating small screen size 
 
