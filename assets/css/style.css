@@ -212,7 +212,7 @@ body {
     }
 }
   
-/* rotating small screen size */
+/* rotating small screen size 
 
 @media screen and (min-width:667px) {
     #logo-site {
