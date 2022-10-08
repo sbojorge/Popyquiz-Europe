@@ -15,7 +15,7 @@ body {
     background-color: whitesmoke;
     font-family: Tenor Sans, sans-serif;
     font-size: 1.25rem;
-    min-height: 100vh;
+    height: 100vh;
     height: -webkit-fill-available;
     color: #1E1926;
 }
@@ -211,32 +211,49 @@ body {
         min-height: 5%;
     }
 }
-    
+  
+/* rotating small screen size */
 
-
-/* rotating small screen size 
-
-@media screen and (max-width:896px) {
-    #logo-site, main > p {
-        margin: 0 0.5rem;
-        padding: 0 0.5rem;
-    }
-
-    .mn-position {
-        margin: 0 2.5%;
-        padding: 0 2.5%;
+@media screen and (min-width:667px) {
+    #logo-site {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
     }
 
     #start-btn {
-        margin: 0.25em;
+        margin: 0.5em;
         padding: 0.25em;
     }
+}
 
-    .foot-container {
-        max-width: none;
-    }    
+@media screen and (max-height:375px) {    
+    #general-container {
+        width:95vw;
+    }
+
+    .answers {
+        margin: 0.10em 1.25 em;
+        padding: 0.10em;
+        border: thin solid #150AFA;
+    }
+
+    #question {
+        margin: 0.25em 1em;
+        padding: 0.10em;
+        font-size: inherit;
+    }
+
+    #qna-container, .social-links {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+ 
    
-} */
+
 
 
 
