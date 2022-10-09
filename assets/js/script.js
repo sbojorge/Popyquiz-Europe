@@ -1,16 +1,7 @@
-// Wait for the DOM to be loaded
 
-document.addEventListener("DOMContentLoaded", function() {
-  let firstButton = document.getElementById("start-btn");
-  firstButton.addEventListener("click", function() {
-    document.getElementById("homepage-container").style.display = "none";
-    document.getElementById("general-container").style.display = "block";
-  })
-});
-  
 //These are the questions for the quiz
 
-let myQuiz = [{    
+var myQuiz = [{    
   q :'Spain has __ UNESCO World Heritage Site: ', 
   a : [48, 10, 14],
   correctAnswer: '48'
@@ -86,20 +77,32 @@ let myQuiz = [{
   correctAnswer: 'San Marino and Vatican City'
 }];
 
+// Wait for the DOM to be loaded
+
+document.addEventListener("DOMContentLoaded", displayQuestion);
+
+let firstButton = document.getElementById("start-btn");
+firstButton.addEventListener("click", function() {
+  document.getElementById("homepage-container").style.display = "none";
+  document.getElementById("general-container").style.display = "block";
+})
+
 //Randomly pick a question and its possible answers and display them on the user interface
 
-let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
-  
-  document.getElementById('question').innerHTML = question.q;
-  document.getElementById('opt1').innerHTML = question.a[0];
-  document.getElementById('opt2').innerHTML = question.a[1];
-  document.getElementById('opt3').innerHTML = question.a[2];
+  function displayQuestion(event) {
+
+    let question = myQuiz[Math.floor(Math.random() * myQuiz.length)];
+    document.getElementById('question').innerHTML = question.q;
+    document.getElementById('opt1').innerHTML = question.a[0];
+    document.getElementById('opt2').innerHTML = question.a[1];
+    document.getElementById('opt3').innerHTML = question.a[2];
+  }
 
 // Check user's choice and if right then console log 'bravo' otherwise console log 'try again'
 
 let options = document.getElementsByClassName("answers");
 
-function handleBtnClick (event) {
+function handleBtnClick(event) {
   let correctAnswers = question.correctAnswer; 
   let selectedOption = this.innerHTML;
   if (selectedOption === correctAnswers) {
@@ -109,8 +112,8 @@ function handleBtnClick (event) {
   }
 } 
   
-for (i = 0; i < options.length; i++) {
-  options[i].addEventListener("click", handleBtnClick);
+for (let option of options) {
+    option.addEventListener("click", handleBtnClick);
 }
 
 // Display a new question /
@@ -123,59 +126,22 @@ function myFunction() {
   document.getElementById('opt1').innerHTML = question.a[0];
   document.getElementById('opt2').innerHTML = question.a[1];
   document.getElementById('opt3').innerHTML = question.a[2];  
-
 }
 
 newQuestion.addEventListener("click", myFunction);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function startQuiz() {
-  
-  
-  
-}
-
-function displayQuestion() {
-  
-}
-
-function checkAnswer() {
-
-}
-
-function incrementScore() {
-
-}
-
-function incrementWrongAnswer () {
-
-}
-
 function displayModal() {
-
-}
-
-function nextQuestion() {
-
-}
-
-function FinalScore() {
 
 }
 
 function quizAgain() {
   
 }
+
+
+
+
+
+
+
+
