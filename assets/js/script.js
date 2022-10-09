@@ -1,11 +1,14 @@
+// Wait for the DOM to be loaded
 
-let firstButton = document.getElementById("start-btn");
-firstButton.addEventListener("click", function() {
-  document.getElementById("homepage-container").style.display = "none";
-  document.getElementById("general-container").style.display = "block";  
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  let firstButton = document.getElementById("start-btn");
+  firstButton.addEventListener("click", function() {
+    document.getElementById("homepage-container").style.display = "none";
+    document.getElementById("general-container").style.display = "block";
+  })
+});
   
-//These are the questions for the quiz /
+//These are the questions for the quiz
 
 let myQuiz = [{    
   q :'Spain has __ UNESCO World Heritage Site: ', 
@@ -83,7 +86,7 @@ let myQuiz = [{
   correctAnswer: 'San Marino and Vatican City'
 }];
 
-//Randomly pick a question and its possible answers and display them on the user interface /
+//Randomly pick a question and its possible answers and display them on the user interface
 
 let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   
@@ -92,7 +95,7 @@ let question = myQuiz[Math.floor(Math.random()*myQuiz.length)];
   document.getElementById('opt2').innerHTML = question.a[1];
   document.getElementById('opt3').innerHTML = question.a[2];
 
-// Check user's choice and if right then console log 'bravo' otherwise console log 'try again  /
+// Check user's choice and if right then console log 'bravo' otherwise console log 'try again'
 
 let options = document.getElementsByClassName("answers");
 
