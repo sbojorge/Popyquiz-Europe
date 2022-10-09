@@ -117,18 +117,33 @@ body {
     color: inherit;
     font-family: Schoolbell, sans-serif;
     font-size: 1.50rem;
-    background-color: deeppink;
+    background-color:  #6349ff;
+    -webkit-border-top-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    -webkit-border-top-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
 }
-
+   
+ #question:hover {
+        box-shadow: 0.1rem 0.1rem 1rem #150AFA;
+ } 
+ 
 .answers {
     display: block;
     min-width: 90%;
     margin: 0.5em 1.25em;
     padding: 0.5em;
-    font-size: inherit;
-    font-family: Tenor sans, sans-serif;
+    font-size: 1.25rem;
+    font-family: Schoolbell, sans-serif;
     color: inherit;
-    border: medium solid #150AFA;    
+    border: medium solid #8d74ff;
+    background-color: #8d74ff;
+    -moz-border-radius: 2em 0;
+    border-radius: 2em 0; 
+}
+
+.answers:hover {
+    box-shadow: 0.2rem 0.2rem 1rem #150AFA;
 }
 
 .hide {
@@ -147,9 +162,23 @@ body {
     min-width: 30%;
     margin: 0.5em 1.25em;
     padding: 0.5em;
-    font-size: inherit;
-    font-family: Tenor sans, sans-serif;
+    font-size: 1.25rem;
+    font-family: Schoolbell, sans-serif;
     color: inherit;
+    background-color: #FA0A0A;
+    border: thin solid #FA0A0A;
+    -webkit-border-top-right-radius: 2.5rem 1.875rem;
+    border-top-right-radius: 2.5rem 1.875rem;
+    -webkit-border-bottom-right-radius: 2.5rem 1.875rem;
+    border-bottom-right-radius: 2.5rem 1.875rem;
+    -webkit-border-top-left-radius: 2.5rem 1.875rem;
+    border-top-left-radius: 2.5rem 1.875rem;
+    -webkit-border-bottom-left-radius: 2.5rem 1.875rem;
+    border-bottom-left-radius: 2.5rem 1.875rem;   
+}
+
+#nxt-btn:hover {
+    box-shadow: 0.1rem 0.1rem 1rem #150AFA;
 }
 
 /* footer */
