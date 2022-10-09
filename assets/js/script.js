@@ -8,9 +8,9 @@ firstButton.addEventListener("click", function() {
 //These are the questions for the quiz /
 
 let myQuiz = [{    
-  q :'What is the capital of Spain?', 
-  a : ['Lisbon', 'Paris', 'Madrid'],
-  correctAnswer: 'Madrid'
+  q :'Spain has __ UNESCO World Heritage Site: ', 
+  a : [48, 10, 14],
+  correctAnswer: '48'
 },
 {
   q : 'Dutch, French and German are the official languages of:',
@@ -18,7 +18,7 @@ let myQuiz = [{
   correctAnswer: 'Belgium'
 },
 {
-  q: 'Which of these cities is the birthplace of the famous composer Wolfgang Amadeus Mozart?:',
+  q: 'Which of these cities is the birthplace of the famous composer Mozart?:',
   a: ['Linz', 'Salzburg', 'Vienna'],
   correctAnswer: 'Salzburg'
 },
@@ -48,9 +48,9 @@ let myQuiz = [{
   correctAnswer: 'Bern'
 },
 {
-  q: 'This flag belongs to the country of:',
-  a: ['img1', 'img2', 'img3'],
-  correctAnswer: 'img3'
+  q: 'The croissant is originally from:',
+  a: ['Paris', 'Vienna', 'Brussels'],
+  correctAnswer: 'Vienna'
 },
 {
   q: 'Olympic Games have their origin in:',
