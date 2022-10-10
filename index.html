@@ -18,7 +18,7 @@
         <h1 id="logo-site">Popy Quiz Europe</h1>
         <p id="quiz-presentation">Take a walk around Europe with this short quiz that mixes culture, gastronomy, sports,
             nature, cities and as a bonus learn some interesting facts about it.</p>
-        <button id="start-btn" data-type="start">Let's go!</button>
+        <button id="start-btn">Let's go!</button>
     </main>
     <!--quiz area: progress,question,multiple choice answer and modal will be displayed here-->
     <div id="general-container">
@@ -30,11 +30,11 @@
         <!--the question and answers-->
         <div id="qna-container">
             <div id="question"></div>
-            <button data-type="option1" id="opt1" class="answers"></button>
-            <button data-type="option2" id="opt2" class="answers"></button>
-            <button data-type="option3" id="opt3" class="answers"></button>
+            <button id="opt1" class="answers"></button>
+            <button id="opt2" class="answers"></button>
+            <button id="opt3" class="answers"></button>
         </div>
-        <!--the modal-->
+        <!--the modal. This is a feature to be implemented-->
         <div id="modal" class="hide">
             <div class="modal-content" class="hide">
                 <span class="close-btn">&times;</span>
@@ -42,15 +42,15 @@
             </div>
         </div>
         <!--control area: next question button will be available here-->
-        <div id="control-area">            
-            <button data-type="next" id="nxt-btn">Next</button>            
+        <div id="control-area">
+            <button data-type="next" id="nxt-btn">Next</button>
         </div>
     </div>
-    </div>
-    <!--result and control area: final score and take quiz again button will be available here-->
+    <!--final area: This is a feature to be implemented-->
+    <!--thank you message and take quiz again button will be available here-->
     <div class="general-container">
-        <p class="hide">Thanks for having taking our quiz!<br>
-        We hope you'd have enjoy it.</p>
+        <p class="hide">Thanks for having taken our quiz!<br>
+            We hope you'd have enjoy it.</p>
         <button class="hide">Take the quiz again</button>
     </div>
     <!--footer-->

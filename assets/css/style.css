@@ -75,7 +75,6 @@ body {
     box-shadow: 0.1rem 0.1rem 1rem #150AFA;
 }
 
-
 /* quiz area */
 
 #general-container {
@@ -96,7 +95,7 @@ body {
 }
 
 #progress-bar > progress {
-    min-height: 4vh;
+    min-height: 4vh;    
 }
 
 #qna-container {
@@ -156,7 +155,8 @@ body {
     align-items: center;
     min-height: 10%;
     margin: 0.25em;
-}
+}     
+
 
 #nxt-btn {
     min-width: 30%;
@@ -262,7 +262,7 @@ body {
 
 @media screen and (min-width: 768px) {
     #homepage-container {
-        margin: 20% 2.5% 0;
+        margin: 10% 2.5% 0;
         padding: 5% 2.5%;
     }
 }
@@ -276,49 +276,7 @@ body {
     }
 }
   
-/* rotating small screen size
 
-@media screen and (min-width:667px) {
-    #logo-site {
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    #start-btn {
-        margin: 0.5em;
-        padding: 0.25em;
-    }
-}
-
-@media screen and (min-width:375px) {    
-    #general-container {
-        width:95vw;
-        margin: 1em auto;
-    }
-
-    .answers {
-        margin: 0.10em 1.25em;
-        padding: 0.10em;
-        border: thin solid #150AFA;
-    }
-
-    #question {
-        margin: 0.25em 1em;
-        padding: 0.10em;
-        font-size: inherit;
-    }
-
-    #qna-container, .social-links {
-        margin: 0;
-        padding: 0;
-    }
-
-    #nxt-btn {
-        margin: 0.10em;
-        padding: 0.20em;
-    }
-}
 
 
  
