@@ -108,6 +108,67 @@ This feature would have provided interesting complementary information about the
 
 I lacked of time to work on these features.
 
+## Testing
+
+### Lighthouse
+
+![Lighthouse report](/assets/images/picture11.webp)]
+
+### Markup validator
+
+Tests were made on the official HTML validator at: https://validator.w3.org/
+
+Result: 2 errors; they were not solved because of lack of time.
+
+![HTML result](/assets/images/picture12.webp)
+
+### CSS validator
+
+Test was made on the official CSS validator at: https://jigsaw.w3.org/css-validator/
+
+Results: No errors found.
+
+![CSS result](/assets/images/picture13.webp)
+
+### JShint
+
+Javascript was test on the official validator at: https://jshint.com/
+
+Result: 13 warnings. No action taken upon due to lack of time.
+
+![JS result](/assets/images/picture14.webp)
+
+## Deployment
+
+The site was deployed to GitHub pages. These are the followed steps for deploying:
+
+In the GitHub repository, navigate to the "Settings" tab;
+
+Click on "Pages" from the left hand menu;
+
+In the "Branch" section, from the drop-down menu, select "main" and click on Save;
+
+Refresh the page manually. The link to the now deployed website is: https://sbojorge.github.io/Popyquiz-Europe/
+
+## Credits
+
+### Content
+
+Select random item from an array comes from https://css-tricks.com/snippets/javascript/select-random-item-array/
+
+Code for the button border on the quiz area comes from www.geniuslake.com 
+
+Code for the background image comes from  https://mycolor.space/gradient3?ori=to+bottom&hex=%23150AFA&hex2=%23FFFFFF&hex3=%23FBFF01&submit=submit
+
+### Acknowledgments
+
+My family for believing in me and supporting me. My Mentor, always available and open. The CI Slack community, lovely people ready to share knowledge and experiences.
+
+
+
+
+
+
 
 
 
