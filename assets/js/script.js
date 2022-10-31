@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
   startQuiz.addEventListener('click', function(){
     document.getElementById('homepage-container').style.display = 'none';
     document.getElementById('general-container').style.display = 'block';
-    getNewQuestion();
+    getNewQuestion();  
+
   })
 })
 
@@ -101,6 +102,7 @@ let currentQuestion;
   document.getElementById('opt1').innerHTML = currentQuestion.a[0];
   document.getElementById('opt2').innerHTML = currentQuestion.a[1];
   document.getElementById('opt3').innerHTML = currentQuestion.a[2];
+  document.getElementById('nxt-btn').disabled = true;
  }
 
 // Check user's choice and if right then console log 'bravo' otherwise console log 'try again'
