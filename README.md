@@ -116,11 +116,16 @@ I lacked of time to work on these features.
 
 ### Markup validator
 
+As part of the resubmission, the 2 errors left have now been solved. This is the latest result after the HTML check:
+
+![Last HTML result](/assets/images/picture12_1.webp)
+
 Tests were made on the official HTML validator at: https://validator.w3.org/
 
-Result: 2 errors; they were not solved because of lack of time.
+~~Result: 2 errors; they were not solved because of lack of time.~~
 
-![HTML result](/assets/images/picture12.webp)
+The picture showing the errors has been removed from this section but is still available at assets/images/picture12.webp.
+
 
 ### CSS validator
 

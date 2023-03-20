@@ -1,7 +1,7 @@
 //These are the questions for the quiz
 
 let myQuiz = [{
-  q :'Spain has __ UNESCO World Heritage Site: ', 
+  q : 'Spain has __ UNESCO World Heritage Site:', 
   a : [48, 10, 14],
   correctAnswer : '48'
 },
