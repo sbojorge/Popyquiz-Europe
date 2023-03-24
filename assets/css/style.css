@@ -158,7 +158,7 @@ body {
 }     
 
 
-#nxt-btn {
+/* #nxt-btn {
     min-width: 30%;
     margin: 0.5em 1.25em;
     padding: 0.5em;
@@ -174,8 +174,8 @@ body {
     -webkit-border-top-left-radius: 2.5rem 1.875rem;
     border-top-left-radius: 2.5rem 1.875rem;
     -webkit-border-bottom-left-radius: 2.5rem 1.875rem;
-    border-bottom-left-radius: 2.5rem 1.875rem;   
-}
+    border-bottom-left-radius: 2.5rem 1.875rem;
+}*/
 
 #nxt-btn:hover {
     box-shadow: 0.1rem 0.1rem 1rem #150AFA;
