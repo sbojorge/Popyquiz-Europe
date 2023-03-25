@@ -93,30 +93,44 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let currentQuestion;
 
-/** Randomly picks a question and its possible answers,
- *  displays them on the UI, verifies the answer clicked by the user
- *  and displays the result
- */
+/** Randomly picks a question and its possible answers */
+  
 function getNewQuestion() {
-  //Select random item from an array comes from https://css-tricks.com/snippets/javascript/select-random-item-array/
+
+  //Disable "Next" button until user picks an answer
+
   document.getElementById("nxt-btn").setAttribute('disabled', '');
+
+  //Select random item from an array comes from https://css-tricks.com/snippets/javascript/select-random-item-array/
+
   currentQuestion = myQuiz[Math.floor(Math.random() * myQuiz.length)];
   document.getElementById('question').innerHTML = currentQuestion.q;
   document.getElementById('opt1').innerHTML = currentQuestion.a[0];
   document.getElementById('opt2').innerHTML = currentQuestion.a[1];
   document.getElementById('opt3').innerHTML = currentQuestion.a[2];
+  
+  //Enable answers so user can select a choice comes from https://bobbyhadz.com/blog/javascript-set-attribute-disabled
+  let buttons = document.querySelectorAll('.answers');
+
+  for (let button of buttons) {    
+    button.removeAttribute('disabled');
+  }
 }
 
-// Check user's choice and if right then alert 'bravo' otherwise alert 'try again'
+/** Attach 3 click events to the possible answers to the question  */
 
 let options = document.getElementsByClassName("answers");
 
+for (let option of options) {
 
-function enableBtn() {
-  document.getElementById("nxt-btn").removeAttribute('disabled');
+  option.addEventListener("click", handleOptClicked);
+  option.addEventListener("click", enableBtn);
+  option.addEventListener("click", disableAns);
 }
 
-function handleOptClicked(event) {
+// Check user's choice and use an alert to display the result
+
+function handleOptClicked() {
   let rightAnswers = currentQuestion.correctAnswer;
   let selectedOption = this.innerHTML;
   
@@ -125,15 +139,25 @@ function handleOptClicked(event) {
   } else {
     alert('Wrong answer')
   }
+  
 }
 
-for (let option of options) {
- 
-  option.addEventListener("click", enableBtn);
-  option.addEventListener("click", handleOptClicked);
+// Enable the "Next" button for getting a new question
+
+function enableBtn() {
+  document.getElementById("nxt-btn").removeAttribute('disabled');
 }
 
-// Display a new question after 'Next' button has been clicked
+// Disable answers after the user has made a choice
+
+function disableAns() {
+  let answers = document.querySelectorAll('.answers');
+  for (let answer of answers) {
+    answer.setAttribute('disabled', '');
+  }
+}
+
+/** Display a new question after 'Next' button has been clicked */
 
 let newQuestion = document.getElementById("nxt-btn");    
 newQuestion.addEventListener("click", getNewQuestion); 
