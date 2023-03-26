@@ -98,22 +98,26 @@ let currentQuestion;
 function getNewQuestion() {
 
   //Disable "Next" button until user picks an answer
-
   document.getElementById("nxt-btn").setAttribute('disabled', '');
 
   //Select random item from an array comes from https://css-tricks.com/snippets/javascript/select-random-item-array/
-
   currentQuestion = myQuiz[Math.floor(Math.random() * myQuiz.length)];
+
+  //Remove current question from the list of questions (myQuiz) so question will not be repeated
+  let indexCurrentQuestion = myQuiz.indexOf(currentQuestion);
+  let removeCurrentQuestion = myQuiz.splice(indexCurrentQuestion,1);
+
+  //Display current question and its possible answers
   document.getElementById('question').innerHTML = currentQuestion.q;
   document.getElementById('opt1').innerHTML = currentQuestion.a[0];
   document.getElementById('opt2').innerHTML = currentQuestion.a[1];
   document.getElementById('opt3').innerHTML = currentQuestion.a[2];
   
-  //Enable answers so user can select a choice comes from https://bobbyhadz.com/blog/javascript-set-attribute-disabled
-  let buttons = document.querySelectorAll('.answers');
+  //Enable answers so user can select a choice
+  let answerButtons = document.querySelectorAll('.answers');
 
-  for (let button of buttons) {    
-    button.removeAttribute('disabled');
+  for (let answerButton of answerButtons) {    
+    answerButton.removeAttribute('disabled');
   }
 }
 
