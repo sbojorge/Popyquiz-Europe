@@ -189,7 +189,14 @@ playAgain.addEventListener("click", function() {
   document.getElementById('quiz-again-btn').style.display = 'none';
   document.getElementById('general-container').style.display = 'block';
   getNewQuestion(); 
-  // document.getElementById('thanks').style.display = 'block';
   }
 )
- 
+
+/** Restart the quiz */
+
+let restart = document.getElementById('restart-btn');
+restart.addEventListener("click", function() {
+  document.getElementById('homepage-container').style.display = 'block';
+  document.getElementById('general-container').style.display = 'none';
+  }
+)
