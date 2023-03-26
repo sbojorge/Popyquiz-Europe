@@ -78,16 +78,14 @@ let myQuiz = [{
   }
 ]
 
-// Wait for the DOM to be loaded
+/** Wait for the DOM to be loaded and then start the quiz */
 
 document.addEventListener('DOMContentLoaded', function () {
   let startQuiz = document.getElementById('start-btn');
   startQuiz.addEventListener('click', function () {
     document.getElementById('homepage-container').style.display = 'none';
     document.getElementById('general-container').style.display = 'block';
-    getNewQuestion();
-    
-    
+    getNewQuestion();    
   })
 })
 
@@ -96,8 +94,9 @@ let currentQuestion;
 /** Randomly picks a question and its possible answers */
   
 function getNewQuestion() {
-
-  //Disable "Next" button until user picks an answer
+  
+  
+//Disable "Next" button until user picks an answer
   document.getElementById("nxt-btn").setAttribute('disabled', '');
 
   //Select random item from an array comes from https://css-tricks.com/snippets/javascript/select-random-item-array/
@@ -105,19 +104,30 @@ function getNewQuestion() {
 
   //Remove current question from the list of questions (myQuiz) so question will not be repeated
   let indexCurrentQuestion = myQuiz.indexOf(currentQuestion);
-  let removeCurrentQuestion = myQuiz.splice(indexCurrentQuestion,1);
+  myQuiz.splice(indexCurrentQuestion,1);
+  
+  // console.log(removeCurrentQuestion);
+  // let outOfTheQuiz = [];
+  // outOfTheQuiz.push(removeCurrentQuestion);
+  // console.log(outOfTheQuiz);
 
   //Display current question and its possible answers
   document.getElementById('question').innerHTML = currentQuestion.q;
   document.getElementById('opt1').innerHTML = currentQuestion.a[0];
   document.getElementById('opt2').innerHTML = currentQuestion.a[1];
   document.getElementById('opt3').innerHTML = currentQuestion.a[2];
-  
+      
   //Enable answers so user can select a choice
   let answerButtons = document.querySelectorAll('.answers');
 
   for (let answerButton of answerButtons) {    
     answerButton.removeAttribute('disabled');
+  }
+
+  //Keep going or stop the quiz
+  let remainingQuestions = myQuiz.length;  
+  if (remainingQuestions == 10) {
+    endQuiz();
   }
 }
 
@@ -133,7 +143,6 @@ for (let option of options) {
 }
 
 // Check user's choice and use an alert to display the result
-
 function handleOptClicked() {
   let rightAnswers = currentQuestion.correctAnswer;
   let selectedOption = this.innerHTML;
@@ -142,18 +151,15 @@ function handleOptClicked() {
     alert('Bravo!');
   } else {
     alert('Wrong answer')
-  }
-  
+  }  
 }
 
 // Enable the "Next" button for getting a new question
-
 function enableBtn() {
   document.getElementById("nxt-btn").removeAttribute('disabled');
 }
 
 // Disable answers after the user has made a choice
-
 function disableAns() {
   let answers = document.querySelectorAll('.answers');
   for (let answer of answers) {
@@ -166,5 +172,17 @@ function disableAns() {
 let newQuestion = document.getElementById("nxt-btn");    
 newQuestion.addEventListener("click", getNewQuestion); 
 
+/** Finish the quiz */
 
+function endQuiz() {
+ //Display thanks message
+ document.getElementById('general-container').style.display = 'none';
+ document.getElementById('thanks').style.display = 'block';
+ document.getElementById('quiz-again-btn').style.display = 'block';
+}
 
+// if (myQuiz.length == 10 ) {
+//   document.getElementById('general-container').style.display = 'none';
+//   document.getElementById('thanks').style.display = 'block';
+//   document.getElementById('quiz-again-btn').style.display = 'block';
+// }
