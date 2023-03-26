@@ -65,25 +65,29 @@ The footer remains available at user's hand during the whole visit.
 
 * Question and answer section
 
+This section is displayed after the user clicks on the "Let's go!" button on the home page. All user's actions on this section are responded thanks to Javascript.
+
 ![This is the section where question and answers are displayed](/assets/images/picture6.webp)
 
-This section is displayed after the user clicks on the "Let's go!" button on the home page.
+Question and answers are randomly picked from a list of available questions.
 
-All user's actions on this section are responded thanks to Javascript: 
+Answer options are enabled so the user can click on any of them.The "Next" button is disabled until an answer is selected.
 
-- Question and answers are randomly picked from a list of available questions
+As part of the resubmission of this project, once the user has selected an answer, the remaining options are disabled. It prevents the user from cheating on the score.
 
-- The user can click on the answer of his/her choice. It will be then checked and the result is brought out to the user through an alert:
+After clicking on an answer, it will be checked and the result is brought out to the user through an alert:
 
 ![Bravo if the answer is correct](/assets/images/picture7.webp)
 
-![Try again if the answer is wrong](/assets/images/picture8.webp)
+![Wrong answer if answer is incorrect](/assets/images/picture8.webp)
 
-With the intention of not discouraging our young public, it's been decided to have none score and not to disable the answers once the user has made a choice. The user can use then all his/her chances until discovering the right answer and/or interact with the same question as long and as many times as desired.
+~~With the intention of not discouraging our young public, it's been decided to have none score and not to disable the answers once the user has made a choice. The user can use then all his/her chances until discovering the right answer and/or interact with the same question as long and as many times as desired.~~
 
-- Once the user clicks on the "Next" button the website will display a new question and the quiz will go on
+By clicking on the "Next" button the website will display a new question and the quiz will go on.
 
 ![This is the Next button](/assets/images/picture9.webp)
+
+Questions aren't repeated.
 
 ## Features left to implement
 
