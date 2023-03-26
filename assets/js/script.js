@@ -126,7 +126,7 @@ function getNewQuestion() {
 
   //Keep going or stop the quiz
   let remainingQuestions = myQuiz.length;  
-  if (remainingQuestions == 10) {
+  if (remainingQuestions == 9) {
     endQuiz();
   }
 }
@@ -181,8 +181,15 @@ function endQuiz() {
  document.getElementById('quiz-again-btn').style.display = 'block';
 }
 
-// if (myQuiz.length == 10 ) {
-//   document.getElementById('general-container').style.display = 'none';
-//   document.getElementById('thanks').style.display = 'block';
-//   document.getElementById('quiz-again-btn').style.display = 'block';
-// }
+/** Play again */
+
+let playAgain = document.getElementById('quiz-again-btn');
+playAgain.addEventListener("click", function() {
+  document.getElementById('thanks').style.display = 'none';
+  document.getElementById('quiz-again-btn').style.display = 'none';
+  document.getElementById('general-container').style.display = 'block';
+  getNewQuestion(); 
+  // document.getElementById('thanks').style.display = 'block';
+  }
+)
+ 
