@@ -93,8 +93,7 @@ let currentQuestion;
 
 /** Randomly picks a question and its possible answers */
   
-function getNewQuestion() {
-  
+function getNewQuestion() {  
   
 //Disable "Next" button until user picks an answer
   document.getElementById("nxt-btn").setAttribute('disabled', '');
@@ -106,11 +105,6 @@ function getNewQuestion() {
   let indexCurrentQuestion = myQuiz.indexOf(currentQuestion);
   myQuiz.splice(indexCurrentQuestion,1);
   
-  // console.log(removeCurrentQuestion);
-  // let outOfTheQuiz = [];
-  // outOfTheQuiz.push(removeCurrentQuestion);
-  // console.log(outOfTheQuiz);
-
   //Display current question and its possible answers
   document.getElementById('question').innerHTML = currentQuestion.q;
   document.getElementById('opt1').innerHTML = currentQuestion.a[0];
@@ -129,6 +123,12 @@ function getNewQuestion() {
   if (remainingQuestions == 9) {
     endQuiz();
   }
+
+  //Display progress of the quiz in the progress bar 
+  let increaseValue = document.getElementById('count');
+  if (increaseValue.value <= 5) {
+    increaseValue.value += 1;      
+  }  
 }
 
 /** Attach 3 click events to the possible answers to the question  */
@@ -175,7 +175,7 @@ newQuestion.addEventListener("click", getNewQuestion);
 /** Finish the quiz */
 
 function endQuiz() {
- //Display thanks message
+ //Display thanks message and take the quiz again button
  document.getElementById('general-container').style.display = 'none';
  document.getElementById('thanks').style.display = 'block';
  document.getElementById('quiz-again-btn').style.display = 'block';
