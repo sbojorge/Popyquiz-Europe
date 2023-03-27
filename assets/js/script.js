@@ -185,6 +185,8 @@ function endQuiz() {
 
 let playAgain = document.getElementById('quiz-again-btn');
 playAgain.addEventListener("click", function() {
+  let score = document.getElementById('count');
+  score.value = 0;
   document.getElementById('thanks').style.display = 'none';
   document.getElementById('quiz-again-btn').style.display = 'none';
   document.getElementById('general-container').style.display = 'block';
@@ -196,7 +198,9 @@ playAgain.addEventListener("click", function() {
 
 let restart = document.getElementById('restart-btn');
 restart.addEventListener("click", function() {
-  document.getElementById('homepage-container').style.display = 'block';
+  let score = document.getElementById('count');
+  score.value = 0;
+  document.getElementById('homepage-container').style.display = 'flex';
   document.getElementById('general-container').style.display = 'none';
   }
 )
