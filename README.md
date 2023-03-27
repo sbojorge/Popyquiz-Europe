@@ -95,22 +95,22 @@ It's with deep regret that some desired, and important, features were left to im
 
 These are the concerned feautures:
 
-* Progress bar
+* ~~Progress bar~~
 
 ![This is an image of the progress bar](/assets/images/picture10.webp)
 
-This feature would have provided the user with an intituive idea of the amount of questions per round.
+As part of the resubmission, this feature has been implemented. The user is now provided with an intituive idea of the duration of the quiz per round.
 
 * Modal
 
 This feature would have provided interesting complementary information about the question i.e "Croissants were invented in Vienna to celebrate the defeat of the Turkish army at the siege of the Austrian capital in 1683"
 
-* Stopping the quiz after 5 displayed questions.
+* ~~Stopping the quiz after 5 displayed questions.~~
 
-  In addition, at the end of the quiz a thank you message would have been displayed as well as a new call to action: "Take the quiz again".
-  
+  This feature is now available. After a round of 5 questions the quiz finishes and a "thank you" message is displayed as well as a button with a call to action: "Take the quiz again".
 
-I lacked of time to work on these features.
+* Score tracking
+
 
 ## Testing
 
