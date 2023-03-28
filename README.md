@@ -12,6 +12,9 @@ The website is responsive in the most common screen devices (smartphone, tablet,
 * 1280 x 802px
 * 1600 x 992px
 
+The deployed website is available for you here https://sbojorge.github.io/Popyquiz-Europe/
+
+
 ![This is a mockup image of the deployed website](/assets/images/picture1.webp)
 
 ## Technologies
@@ -73,62 +76,48 @@ This section is displayed after the user clicks on the "Let's go!" button on the
 
 Question and answers are randomly picked from a list of available questions.
 
-Answer options are enabled so the user can click on any of them.The "Next" button is disabled until an answer is selected.
+Answer options are enabled so the user can click on any of them.
 
-As part of the resubmission of this project, once the user has selected an answer, the remaining options are disabled. It prevents the user from cheating on the score.
-
-After clicking on an answer, it will be checked and the result is brought out to the user through an alert:
+After the user clicks on an answer 2 things will happen:
+* The answer will be checked and the result is brought out to the user through an alert:
 
 ![Bravo if the answer is correct](/assets/images/picture7.webp)
 
 ![Wrong answer if answer is incorrect](/assets/images/picture8.webp)
 
-~~With the intention of not discouraging our young public, it's been decided to have none score and not to disable the answers once the user has made a choice. The user can use then all his/her chances until discovering the right answer and/or interact with the same question as long and as many times as desired.~~
+* A new question is displayed by its own.
 
-By clicking on the "Next" button the website will display a new question and the quiz will go on.
-A new question is displayed by its own.
-![This is the Next button](/assets/images/picture9.webp)
+The "Home" button lets the user to restart the quiz by taking him/her back to the home page.
 
-Questions aren't repeated.
+Thanks to an array method, the splice method, questions aren't repeated during the quiz round.
 
-## Features left to implement
-
-These are the concerned feautures:
-
-* ~~Progress bar~~
+The progress bar works well and provides the user with an intituive idea of the duration of the quiz.
 
 ![This is an image of the progress bar](/assets/images/picture10.webp)
 
-As part of the resubmission, this feature has been implemented. The user is now provided with an intituive idea of the duration of the quiz per round.
+Both the progress and the quiz are reset when the user takes the quiz again or goes back to the home page.
 
-* Modal
+The quiz is finished after 5 answered questions.
 
-This feature would have provided interesting complementary information about the question i.e "Croissants were invented in Vienna to celebrate the defeat of the Turkish army at the siege of the Austrian capital in 1683"
+## Features left to implement
 
-* ~~Stopping the quiz after 5 displayed questions.~~
+In the future I'd like to implement:
 
-  This feature is now available. After a round of 5 questions the quiz finishes and a "thank you" message is displayed as well as a button with a call to action: "Take the quiz again".
-
-* Score tracking
-
+* Score tracking, to let know the user how many right and wrong questions he/she had;
 
 ## Testing
 
 ### Lighthouse
 
-![Lighthouse report](/assets/images/picture11.webp)]
+![Lighthouse report](/assets/images/picture11.webp)
 
 ### Markup validator
 
-As part of the resubmission, the 2 errors left have now been solved. This is the latest result after the HTML check:
+This is the latest result after the HTML check:
 
 ![Last HTML result](/assets/images/picture12_1.webp)
 
 Tests were made on the official HTML validator at: https://validator.w3.org/
-
-~~Result: 2 errors; they were not solved because of lack of time.~~
-
-The picture showing the errors has been removed from this section but is still available at assets/images/picture12.webp.
 
 
 ### CSS validator
@@ -143,9 +132,9 @@ Results: No errors found.
 
 Javascript was test on the official validator at: https://jshint.com/
 
-Result: 13 warnings. No action taken upon due to lack of time.
+Nor errors or warnings detected in the report:
 
-![JS result](/assets/images/picture14.webp)
+![JS result](/assets/images/picture15.webp)
 
 ## Deployment
 
