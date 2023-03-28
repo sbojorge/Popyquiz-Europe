@@ -43,7 +43,8 @@ let myQuiz = [{
 {
   q: 'The croissant is originally from:',
   a: ['Paris', 'Vienna', 'Brussels'],
-  correctAnswer: 'Vienna'
+  correctAnswer: 'Vienna',
+  modal: 'to celebrate the defeat of the Turkish army at the siege of the Austrian capital in 1683'
 },
 {
   q: 'Olympic Games have their origin in:',
@@ -186,8 +187,8 @@ function getNewQuestion() {
   document.getElementById('opt1').innerHTML = currentQuestion.a[0];
   document.getElementById('opt2').innerHTML = currentQuestion.a[1];
   document.getElementById('opt3').innerHTML = currentQuestion.a[2];
-      
-    //Keep going or stop the quiz
+        
+  //Keep going or stop the quiz
   let remainingQuestions = myQuiz.length;  
   if (remainingQuestions == 9) {
     endQuiz();
@@ -206,8 +207,9 @@ let options = document.getElementsByClassName("answers");
 
 for (let option of options) {
 
-  option.addEventListener("click", handleOptClicked);  
+  option.addEventListener("click", handleOptClicked);
   option.addEventListener("click", getNewQuestion);
+  
 }
 
 //Check user's choice and use an alert to display the result
@@ -218,7 +220,7 @@ function handleOptClicked() {
   if (selectedOption === rightAnswers) {
     alert('Bravo!');
   } else {
-    alert('Wrong answer')
+    alert(`Wrong! The right answer is ${currentQuestion.correctAnswer}`);
   }  
 }
 
