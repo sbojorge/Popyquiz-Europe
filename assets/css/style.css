@@ -158,7 +158,7 @@ body {
 }     
 
 
-/* #nxt-btn {
+#home-btn {
     min-width: 30%;
     margin: 0.5em 1.25em;
     padding: 0.5em;
@@ -175,7 +175,7 @@ body {
     border-top-left-radius: 2.5rem 1.875rem;
     -webkit-border-bottom-left-radius: 2.5rem 1.875rem;
     border-bottom-left-radius: 2.5rem 1.875rem;
-}*/
+}
 
 #nxt-btn:hover {
     box-shadow: 0.1rem 0.1rem 1rem #150AFA;
@@ -223,6 +223,43 @@ body {
 
 .logos li a {
     color: inherit;
+}
+
+/* end of quiz area */
+
+.endpage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 2.5% 1%;
+    padding: 5% 2.5%;
+}
+
+#thanks {
+    color: #150AFA;
+    font-family: Chicle;
+    font-weight: 200;
+    font-size: 200%;
+    margin: 1.5rem 1rem 0.5rem;
+    padding: 2rem;
+    text-align:center;
+}
+
+#quiz-again-btn {
+    background-color: #FBFF01;
+    border-style:solid;
+    border-color: #150AFA;
+    border-radius: 5%;     
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.15rem;
+    padding: 0.25em;
+    margin: 2em;
+}
+
+#quiz-again-btn:hover {
+    box-shadow: 0.1rem 0.1rem 1rem #150AFA;
 }
 
 /* media queries */

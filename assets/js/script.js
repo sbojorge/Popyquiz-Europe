@@ -96,7 +96,7 @@ let currentQuestion;
 function getNewQuestion() {  
   
 //Disable "Next" button until user picks an answer
-  document.getElementById("nxt-btn").setAttribute('disabled', '');
+  // document.getElementById("nxt-btn").setAttribute('disabled', '');
 
   //Select random item from an array comes from https://css-tricks.com/snippets/javascript/select-random-item-array/
   currentQuestion = myQuiz[Math.floor(Math.random() * myQuiz.length)];
@@ -104,6 +104,8 @@ function getNewQuestion() {
   //Remove current question from the list of questions (myQuiz) so question will not be repeated
   let indexCurrentQuestion = myQuiz.indexOf(currentQuestion);
   myQuiz.splice(indexCurrentQuestion,1);
+  let overWritten = myQuiz.length;
+  console.log(overWritten);
   
   //Display current question and its possible answers
   document.getElementById('question').innerHTML = currentQuestion.q;
@@ -112,16 +114,20 @@ function getNewQuestion() {
   document.getElementById('opt3').innerHTML = currentQuestion.a[2];
       
   //Enable answers so user can select a choice
-  let answerButtons = document.querySelectorAll('.answers');
+  // let answerButtons = document.querySelectorAll('.answers');
 
-  for (let answerButton of answerButtons) {    
-    answerButton.removeAttribute('disabled');
-  }
+  // for (let answerButton of answerButtons) {    
+  //   answerButton.removeAttribute('disabled');
+  // }
 
   //Keep going or stop the quiz
   let remainingQuestions = myQuiz.length;  
-  if (remainingQuestions == 9) {
+  if (remainingQuestions == 10) {
     endQuiz();
+  } else if (remainingQuestions == 5) {
+    endQuiz();
+  } else {
+    console.log('play');
   }
 
   //Display progress of the quiz in the progress bar 
@@ -137,9 +143,9 @@ let options = document.getElementsByClassName("answers");
 
 for (let option of options) {
 
-  option.addEventListener("click", handleOptClicked);
-  option.addEventListener("click", enableBtn);
-  option.addEventListener("click", disableAns);
+  option.addEventListener("click", handleOptClicked);  
+  // option.addEventListener("click", disableAns);
+  option.addEventListener("click", getNewQuestion);
 }
 
 // Check user's choice and use an alert to display the result
@@ -154,23 +160,23 @@ function handleOptClicked() {
   }  
 }
 
-// Enable the "Next" button for getting a new question
-function enableBtn() {
-  document.getElementById("nxt-btn").removeAttribute('disabled');
-}
+// THIS SHOULD BE DELETED - Enable the "Next" button for getting a new question
+// function enableBtn() {
+//   document.getElementById("nxt-btn").removeAttribute('disabled');
+// }
 
 // Disable answers after the user has made a choice
-function disableAns() {
-  let answers = document.querySelectorAll('.answers');
-  for (let answer of answers) {
-    answer.setAttribute('disabled', '');
-  }
-}
+// function disableAns() {
+//   let answers = document.querySelectorAll('.answers');
+//   for (let answer of answers) {
+//     answer.setAttribute('disabled', '');
+//   }
+// }
 
 /** Display a new question after 'Next' button has been clicked */
 
 let newQuestion = document.getElementById("nxt-btn");    
-newQuestion.addEventListener("click", getNewQuestion); 
+// newQuestion.addEventListener("click", getNewQuestion); 
 
 /** Finish the quiz */
 
@@ -196,7 +202,7 @@ playAgain.addEventListener("click", function() {
 
 /** Restart the quiz */
 
-let restart = document.getElementById('restart-btn');
+let restart = document.getElementById('home-btn');
 restart.addEventListener("click", function() {
   let score = document.getElementById('count');
   score.value = 0;
