@@ -20,13 +20,15 @@ This web application was built using HTML, CSS and JavaScript.
 
 ## Features
 
-The website can currently display a home page and a quiz area (user interface).
+The website has 3 pages: the home page, the quiz area (user interface) and a finish page.
 
-Both were designed with a "mobile first" intention in mind.
+All of them were designed with a "mobile first" intention in mind.
 
 The home page tells the users who we are, what we do/offer and a call to take action.
 
 The quiz area displays all the required elements on viewport.
+
+The finish page displays a thank you message to the user and has a button to take the quiz again.
 
 The background image and colors were selected to subtly recall the EU colors and thus reinforce the topic in the user's mind.
 
@@ -84,14 +86,12 @@ After clicking on an answer, it will be checked and the result is brought out to
 ~~With the intention of not discouraging our young public, it's been decided to have none score and not to disable the answers once the user has made a choice. The user can use then all his/her chances until discovering the right answer and/or interact with the same question as long and as many times as desired.~~
 
 By clicking on the "Next" button the website will display a new question and the quiz will go on.
-
+A new question is displayed by its own.
 ![This is the Next button](/assets/images/picture9.webp)
 
 Questions aren't repeated.
 
 ## Features left to implement
-
-It's with deep regret that some desired, and important, features were left to implement.
 
 These are the concerned feautures:
 
