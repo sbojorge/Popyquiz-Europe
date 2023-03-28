@@ -75,9 +75,8 @@ let myQuiz = [{
   q: 'Italy has 2 independent countries within its area. These countries are:',
   a: ['Meurthe-et-Moselle', 'San Marino and Vatican City', 'Venice and Tuscany'],
   correctAnswer: 'San Marino and Vatican City'
-
 }
-]
+];
 
 /** Wait for the DOM to be loaded and then start the quiz */
 
@@ -87,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('homepage-container').style.display = 'none';
     document.getElementById('general-container').style.display = 'block';
     getNewQuestion();    
-  })
-})
+  });
+});
 
 let currentQuestion;
 
@@ -244,7 +243,7 @@ playAgain.addEventListener("click", function() {
   document.getElementById('quiz-again-btn').style.display = 'none';
   document.getElementById('general-container').style.display = 'block';
   }
-)
+);
 
 /** Restart the quiz */
 
@@ -256,4 +255,4 @@ restart.addEventListener("click", function() {
   document.getElementById('homepage-container').style.display = 'flex';
   document.getElementById('general-container').style.display = 'none';
   }
-)
+);
