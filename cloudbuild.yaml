@@ -22,6 +22,11 @@ steps:
     # If your app.yaml is not in the root directory, specify subDirectory:
     # dir: 'my-app-directory'
 
+options:
+  # This option directs all build logs to Cloud Logging.
+  # It resolves the "if 'build.service_account' is specified, the build must either..." error.
+  logging: CLOUD_LOGGING_ONLY
+
 # Optional: Define additional build steps like running tests, building frontend assets, etc.
 # For example, if you use a build tool like Webpack for your JavaScript:
 # - name: 'gcr.io/cloud-builders/npm'
