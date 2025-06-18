@@ -29,8 +29,8 @@ handlers:
     # If your quiz is a single-page application (SPA) and uses client-side routing,
     # you might want to uncomment the following line to serve index.html for all paths
     # that don't match a static file. This enables deep linking.
-    static_files: index.html
-    upload: index.html
+    #static_files: index.html
+    #upload: index.html
 
 # Optional: Configure instance scaling properties.
 # For a basic quiz, automatic scaling is usually sufficient.
