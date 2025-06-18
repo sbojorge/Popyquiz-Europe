@@ -1,0 +1,31 @@
+# cloudbuild.yaml
+# Configuration for Google Cloud Build to deploy to App Engine Standard
+
+steps:
+  # Step 1: Install dependencies (if you have a package.json for your Node.js app,
+  # even if it's just for 'express' to serve static files).
+  # This step is important if your server.js (or app.js) has dependencies.
+  # If you are *only* serving static files and server.js has no external npm deps,
+  # you can omit this step. However, it's good practice to include it.
+  - name: 'gcr.io/cloud-builders/npm' # Using the npm builder
+    args: ['install']
+    # If your package.json is not in the root directory, specify subDirectory:
+    # dir: 'my-app-directory'
+
+  # Step 2: Deploy the application to Google App Engine.
+  # The 'gcloud' builder is used for interacting with Google Cloud services.
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
+    # You can specify the project and version if needed, but typically Cloud Build
+    # automatically infers the project from the build context.
+    # args: ['app', 'deploy', '--project', 'your-gcp-project-id', '--version', 'v1']
+    # If your app.yaml is not in the root directory, specify subDirectory:
+    # dir: 'my-app-directory'
+
+# Optional: Define additional build steps like running tests, building frontend assets, etc.
+# For example, if you use a build tool like Webpack for your JavaScript:
+# - name: 'gcr.io/cloud-builders/npm'
+#   args: ['run', 'build'] # Assuming you have a "build" script in package.json
+
+# You can specify timeout for the entire build process.
+timeout: '1200s' # 20 minutes

@@ -1,0 +1,44 @@
+# app.yaml
+# App Engine Standard environment configuration for a Node.js runtime
+
+runtime: nodejs20 # Specifies the Node.js 20 runtime. You can choose other versions like nodejs18, nodejs16.
+env: standard    # Specifies the App Engine Standard environment.
+
+# Handlers define how incoming requests are routed.
+# This configuration ensures that all static files (HTML, CSS, JavaScript)
+# are served correctly.
+handlers:
+  # Serve static files from the root directory.
+  # This pattern matches any file in the root directory (where index.html, css, js are).
+  # The '^/(.*\..*)$' regex matches any path that contains a dot (e.g., file.html, style.css, script.js)
+  # This is crucial for serving your index.html, CSS, and JavaScript files directly.
+  - url: /(.*\..*)$
+    static_files: \1
+    upload: (.*\..*)$
+    # This handler allows browsers to cache your static files for a longer period,
+    # which can improve performance.
+    expiration: "7d" # Cache static files for 7 days
+
+  # The main handler for any requests not matched by the static file handler.
+  # This typically points to your Node.js server entry point (server.js or app.js).
+  # In this setup, if a request doesn't match a static file, it will fall back to your Node.js application.
+  # For a single-page application, this is often used to redirect all non-static paths to index.html
+  # to handle client-side routing.
+  - url: /.*
+    script: auto # Automatically detects the entry point (e.g., app.js or server.js)
+    # If your quiz is a single-page application (SPA) and uses client-side routing,
+    # you might want to uncomment the following line to serve index.html for all paths
+    # that don't match a static file. This enables deep linking.
+    static_files: index.html
+    upload: index.html
+
+# Optional: Configure instance scaling properties.
+# For a basic quiz, automatic scaling is usually sufficient.
+automatic_scaling:
+  min_instances: 0 # Allows the application to scale down to zero instances when not in use.
+  max_instances: 1 # You can adjust this based on expected traffic.
+  target_cpu_utilization: 0.6 # Target CPU utilization before scaling up.
+
+# Optional: Set environment variables for your application if needed.
+# env_variables:
+#   MY_VARIABLE: "some_value"
